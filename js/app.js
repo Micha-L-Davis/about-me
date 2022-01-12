@@ -4,6 +4,8 @@ const buzzText = 'BZZZZT! INCORRECT!';
 const dingText = 'DING! Correct!';
 const errText = 'Please answer with either "yes/no" or "y/n"';
 
+let score = 0;
+
 let user = prompt('Hi there, friend! What\'s your name?');
 
 alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
@@ -18,6 +20,7 @@ if (answer === 'y' || answer === 'yes'){
 else if (answer === 'n' || answer === 'no'){
   // console.log(dingText);
   alert(dingText);
+  score++;
 }
 else {
   // console.log(errText);
@@ -32,6 +35,7 @@ if (answer === 'n' || answer === 'no'){
 else if (answer === 'y' || answer === 'yes'){
   // console.log(dingText);
   alert(dingText);
+  score++;
 }
 else {
   // console.log(errText);
@@ -46,6 +50,7 @@ if (answer === 'y' || answer === 'yes'){
 else if (answer === 'n' || answer === 'no'){
   // console.log(dingText);
   alert(dingText);
+  score++;
 }
 else {
   // console.log(errText);
@@ -60,6 +65,7 @@ if (answer === 'n' || answer === 'no'){
 else if (answer === 'y' || answer === 'yes'){
   // console.log(dingText);
   alert(dingText);
+  score++;
 }
 else {
   // console.log(errText);
@@ -74,6 +80,7 @@ if (answer === 'n' || answer === 'no'){
 else if (answer === 'y' || answer === 'yes'){
   // console.log(dingText);
   alert(dingText);
+  score++;
 }
 else {
   // console.log(errText);
@@ -96,6 +103,7 @@ while (guesses && !correctGuess){
   }
   if (answer === '1'){
     alert(dingText);
+    score++;
     correctGuess = true;
     continue;
   }
@@ -103,7 +111,7 @@ while (guesses && !correctGuess){
   alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
 }
 
-let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Bill Watterson', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
+let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
 
 correctGuess = false;
 guesses = 10;
@@ -113,6 +121,7 @@ while (guesses && !correctGuess){
     if (answer === favoriteAuthors[i]){
       alert(dingText);
       correctGuess = true;
+      score++;
       break;
     }
   }
@@ -123,6 +132,7 @@ while (guesses && !correctGuess){
   }
 }
 
-
-alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. Stick around once these dialogue boxes go away, and you can read all about me. And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
+alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
+Your final score was ${score}/7. Great job!
+Stick around once these dialogue boxes go away, and you can read all about me. And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
 \nThanks for playing, and please remember to spay and neuter your pets!`);
