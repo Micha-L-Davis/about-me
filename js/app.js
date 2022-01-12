@@ -81,15 +81,17 @@ else {
 }
 
 let correctGuess = false;
-
-while (!correctGuess){
+let guesses = 10;
+while (guesses && !correctGuess){
   answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
   if (answer < 1){
     alert('Too low.  Guess again.');
+    guesses--;
     continue;
   }
   if (answer > 1){
     alert('Too high. Guess again.');
+    guesses--;
     continue;
   }
   if (answer === '1'){
@@ -101,6 +103,25 @@ while (!correctGuess){
   alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
 }
 
+let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Bill Watterson', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
+
+correctGuess = false;
+guesses = 10;
+while (guesses && !correctGuess){
+  answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
+  for (let i = 0; i < favoriteAuthors.length; i++){
+    if (answer === favoriteAuthors[i]){
+      alert(dingText);
+      correctGuess = true;
+      break;
+    }
+  }
+
+  if (!correctGuess){
+    alert(`Hmmm. ${answer} isn't on my list of top favorites, but MAYBE they should be. Guess again!`);
+    guesses--;
+  }
+}
 
 
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. Stick around once these dialogue boxes go away, and you can read all about me. And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
