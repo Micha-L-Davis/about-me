@@ -12,7 +12,7 @@ let yesNoQuestions = ['Micha Pop Quiz!\nQ1: Was Micha once a sailor?','Micha Pop
 let isYesAnswer = [false, true, false, true, true];
 let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
 
-let answer;
+let answer, correctGuess, guesses;
 
 alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
 
@@ -30,7 +30,7 @@ for (let i = 0; i < yesNoQuestions.length; i++){
       continue;
     }
   }
-  if (answer === 'n' || answer === 'no'){
+  else if (answer === 'n' || answer === 'no'){
     if (isYesAnswer[i] === false){
       alert(dingText);
       score++;
@@ -46,8 +46,8 @@ for (let i = 0; i < yesNoQuestions.length; i++){
   }
 }
 
-let correctGuess = false;
-let guesses = 10;
+correctGuess = false;
+guesses = 10;
 while (guesses && !correctGuess){
   answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
   if (answer < 1){
