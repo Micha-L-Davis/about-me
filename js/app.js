@@ -80,5 +80,28 @@ else {
   alert(errText);
 }
 
+let correctGuess = false;
+
+while (!correctGuess){
+  answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
+  if (answer < 1){
+    alert('Too low.  Guess again.');
+    continue;
+  }
+  if (answer > 1){
+    alert('Too high. Guess again.');
+    continue;
+  }
+  if (answer === '1'){
+    alert(dingText);
+    correctGuess = true;
+    continue;
+  }
+
+  alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
+}
+
+
+
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. Stick around once these dialogue boxes go away, and you can read all about me. And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
 \nThanks for playing, and please remember to spay and neuter your pets!`);
