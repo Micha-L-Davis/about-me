@@ -1,14 +1,13 @@
-# LAB - Number
-## Project Name
+# LAB - 02
+## About Me
 
-I build an app with a direct and powerful purpose. It does all of the things that it accomplishes well. I should describe the purpose and functionality so those that visit my README understand the app
+This simple page offers the user a chance to guess things about the author, before showing the user the author's bio.
 
-### Author: Student/Group Name
+### Author: Micha Davis
 
 ### Links and Resources
-    * submission PR
-    * Any Links you used as reference
+    * [public repo](https://github.com/Micha-L-Davis/about-me.git)
 
 ### Reflections and Comments
-    * Consider including the answers to your daily journal and submission questions here
-    * This is also a good place to reflect on the tools and resources used and learned
+    * The purpose of this project was to introduce the concept of logical flow control.
+    * I now have a good grasp of how JS evaluates conditions and choses which lines of code to run.
