@@ -1,3 +1,33 @@
 body {
     background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3vh;
+}
+
+.story {
+    color: rgb(11, 11, 51);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+#para1 {
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+#para2 {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#para3 {
+    margin-left: 15%;
+    margin-right: 5%;
 }
