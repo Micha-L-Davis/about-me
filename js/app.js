@@ -8,83 +8,42 @@ let score = 0;
 
 let user = prompt('Hi there, friend! What\'s your name?');
 
-alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
+let yesNoQuestions = ['Micha Pop Quiz!\nQ1: Was Micha once a sailor?','Micha Pop Quiz!\nQ2: Does Micha have a daughter?','Micha Pop Quiz!\nQ3: Did Micha attend college in Maryland?','Micha Pop Quiz!\nQ4: Has Micha ever released a software product before?','Micha Pop Quiz!\nQ5: Does Micha keep any pets?'];
+let isYesAnswer = [false, true, false, true, true];
+let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
 
 let answer;
 
-answer = prompt('Micha Pop Quiz!\nQ1: Was Micha once a sailor?').toLowerCase();
-if (answer === 'y' || answer === 'yes'){
-  // console.log(buzzText);
-  alert(buzzText);
-}
-else if (answer === 'n' || answer === 'no'){
-  // console.log(dingText);
-  alert(dingText);
-  score++;
-}
-else {
-  // console.log(errText);
-  alert(errText);
-}
+alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
 
-answer = prompt('Micha Pop Quiz!\nQ2: Does Micha have a daughter?').toLowerCase();
-if (answer === 'n' || answer === 'no'){
-  // console.log(buzzText);
-  alert(buzzText);
-}
-else if (answer === 'y' || answer === 'yes'){
-  // console.log(dingText);
-  alert(dingText);
-  score++;
-}
-else {
-  // console.log(errText);
-  alert(errText);
-}
-
-answer = prompt('Micha Pop Quiz!\nQ3: Did Micha attend college in Maryland?').toLowerCase();
-if (answer === 'y' || answer === 'yes'){
-  // console.log(buzzText);
-  alert(buzzText);
-}
-else if (answer === 'n' || answer === 'no'){
-  // console.log(dingText);
-  alert(dingText);
-  score++;
-}
-else {
-  // console.log(errText);
-  alert(errText);
-}
-
-answer = prompt('Micha Pop Quiz!\nQ4: Has Micha ever released a software product before?').toLowerCase();
-if (answer === 'n' || answer === 'no'){
-  // console.log(buzzText);
-  alert(buzzText);
-}
-else if (answer === 'y' || answer === 'yes'){
-  // console.log(dingText);
-  alert(dingText);
-  score++;
-}
-else {
-  // console.log(errText);
-  alert(errText);
-}
-
-answer = prompt('Micha Pop Quiz!\nQ5: Does Micha keep any pets?').toLowerCase();
-if (answer === 'n' || answer === 'no'){
-  // console.log(buzzText);
-  alert(buzzText);
-}
-else if (answer === 'y' || answer === 'yes'){
-  // console.log(dingText);
-  alert(dingText);
-  score++;
-}
-else {
-  // console.log(errText);
-  alert(errText);
+for (let i = 0; i < yesNoQuestions.length; i++){
+  answer = prompt(yesNoQuestions[i]).toLowerCase();
+  console.log(answer);
+  if (answer === 'y' || answer === 'yes'){
+    if (isYesAnswer[i] === false){
+      alert(buzzText);
+      continue;
+    }
+    if (isYesAnswer[i] === true){
+      alert(dingText);
+      score++;
+      continue;
+    }
+  }
+  if (answer === 'n' || answer === 'no'){
+    if (isYesAnswer[i] === false){
+      alert(dingText);
+      score++;
+      continue;
+    }
+    if (isYesAnswer[i] === true){
+      alert(buzzText);
+      continue;
+    }
+  }
+  else {
+    alert(errText);
+  }
 }
 
 let correctGuess = false;
@@ -110,8 +69,6 @@ while (guesses && !correctGuess){
 
   alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
 }
-
-let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
 
 correctGuess = false;
 guesses = 10;
