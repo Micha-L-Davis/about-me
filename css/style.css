@@ -6,8 +6,31 @@ body {
 h1 {
     color: darkblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3vh;
+    font-size: 3vw;
 }
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+    margin: 1% 5%;
+    
+}
+
+ol {
+    list-style-type: decimal;
+    margin-left: 10%;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left:  10%;
+}
+
+/* .lists {
+    display: inline-block;
+    height: max-content;
+    border: 1px solid black;
+} */
 
 .story {
     color: rgb(11, 11, 51);
