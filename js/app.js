@@ -23,6 +23,15 @@ yesNoQuestion();
 
 guessNumber();
 
+guessAuthor();
+
+// Conclusion alert
+alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
+Your final score was ${score}/7. Great job!
+Stick around once these dialogue boxes go away, and you can read all about me. 
+And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
+\nThanks for playing, and please remember to spay and neuter your pets!`);
+
 function yesNoQuestion(){
   for (let i = 0; i < yesNoQuestions.length; i++){
     answer = prompt(yesNoQuestions[i]).toLowerCase();
@@ -87,41 +96,36 @@ function guessNumber(){
 }
 
 // Q7 guessing question
-correctGuess = false;
-guesses = 6;
-while (guesses && !correctGuess){
-  answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my top ten favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
-  for (let i = 0; i < favoriteAuthors.length; i++){
-    if (answer === favoriteAuthors[i]){
-      alert(dingText);
-      correctGuess = true;
-      score++;
-      break;
+function guessAuthor(){
+  correctGuess = false;
+  guesses = 6;
+  while (guesses && !correctGuess){
+    answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my top ten favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
+    for (let i = 0; i < favoriteAuthors.length; i++){
+      if (answer === favoriteAuthors[i]){
+        alert(dingText);
+        correctGuess = true;
+        score++;
+        break;
+      }
+    }
+
+    if (!correctGuess){
+      alert(`Hmmm. ${answer} isn't on my list of top favorites, but MAYBE they should be. Guess again!`);
+      guesses--;
     }
   }
+  if (!guesses && !correctGuess){
 
-  if (!correctGuess){
-    alert(`Hmmm. ${answer} isn't on my list of top favorites, but MAYBE they should be. Guess again!`);
-    guesses--;
+    let answerList = '';
+    for (let i = 0; i < favoriteAuthors.length; i++){
+      if (i !== favoriteAuthors.length - 1){
+        answerList += favoriteAuthors[i] + ', ';
+      }
+      else{
+        answerList += ' and ' + favoriteAuthors[i] + '.';
+      }
+    }
+    alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:\n${answerList}`);
   }
 }
-if (!guesses && !correctGuess){
-
-  let answerList = '';
-  for (let i = 0; i < favoriteAuthors.length; i++){
-    if (i !== favoriteAuthors.length - 1){
-      answerList += favoriteAuthors[i] + ', ';
-    }
-    else{
-      answerList += ' and ' + favoriteAuthors[i] + '.';
-    }
-  }
-  alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:\n${answerList}`);
-}
-
-// Conclusion alert
-alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
-Your final score was ${score}/7. Great job!
-Stick around once these dialogue boxes go away, and you can read all about me. 
-And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
-\nThanks for playing, and please remember to spay and neuter your pets!`);
