@@ -21,6 +21,8 @@ alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It'
 
 yesNoQuestion();
 
+guessNumber();
+
 function yesNoQuestion(){
   for (let i = 0; i < yesNoQuestions.length; i++){
     answer = prompt(yesNoQuestions[i]).toLowerCase();
@@ -55,31 +57,33 @@ function yesNoQuestion(){
 
 
 // Q6 guessing question
-correctGuess = false;
-guesses = 4;
-while (guesses && !correctGuess){
-  answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
-  if (answer < 1){
-    alert('Too low.  Guess again.');
-    guesses--;
-    continue;
-  }
-  if (answer > 1){
-    alert('Too high. Guess again.');
-    guesses--;
-    continue;
-  }
-  if (answer === '1'){
-    alert(dingText);
-    score++;
-    correctGuess = true;
-    continue;
-  }
+function guessNumber(){
+  correctGuess = false;
+  guesses = 4;
+  while (guesses && !correctGuess){
+    answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
+    if (answer < 1){
+      alert('Too low.  Guess again.');
+      guesses--;
+      continue;
+    }
+    if (answer > 1){
+      alert('Too high. Guess again.');
+      guesses--;
+      continue;
+    }
+    if (answer === '1'){
+      alert(dingText);
+      score++;
+      correctGuess = true;
+      continue;
+    }
 
-  alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
-}
-if (!guesses && !correctGuess){
-  alert('Well, you tried, but the answer is: Micha keeps one pet (a cat, named Tango)');
+    alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
+  }
+  if (!guesses && !correctGuess){
+    alert('Well, you tried, but the answer is: Micha keeps one pet (a cat, named Tango)');
+  }
 }
 
 // Q7 guessing question
