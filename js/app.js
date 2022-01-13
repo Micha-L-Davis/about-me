@@ -74,7 +74,7 @@ if (!guesses && !correctGuess){
 }
 
 correctGuess = false;
-guesses = 4;
+guesses = 6;
 while (guesses && !correctGuess){
   answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my top ten favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
   for (let i = 0; i < favoriteAuthors.length; i++){
@@ -97,5 +97,6 @@ if (!guesses && !correctGuess){
 
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
 Your final score was ${score}/7. Great job!
-Stick around once these dialogue boxes go away, and you can read all about me. And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
+Stick around once these dialogue boxes go away, and you can read all about me. 
+And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
 \nThanks for playing, and please remember to spay and neuter your pets!`);
