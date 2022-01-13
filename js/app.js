@@ -92,7 +92,18 @@ while (guesses && !correctGuess){
   }
 }
 if (!guesses && !correctGuess){
-  alert('Well, you tried, but none of those are in my top ten.  Check out my page after the quiz to see the full list!');
+
+  let answerList = '';
+  for (let i = 0; i < favoriteAuthors.length; i++){
+    if (i !== favoriteAuthors.length - 1){
+      answerList += favoriteAuthors[i] + ', ';
+    }
+    else{
+      answerList += ' and ' + favoriteAuthors[i] + '.';
+    }
+  }
+  alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:
+  ${answerList}`);
 }
 
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
