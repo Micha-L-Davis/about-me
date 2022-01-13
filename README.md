@@ -11,3 +11,9 @@ This simple page offers the user a chance to guess things about the author, befo
 ### Reflections and Comments
     * The purpose of this project was to introduce the concept of logical flow control.
     * I now have a good grasp of how JS evaluates conditions and choses which lines of code to run.
+
+#LAB - 03
+
+### Reflections and Comments
+    * The purpose of this project was to extend the About Me game using loops to control flow.
+    * I was able to implement an array of strings to replace several lines of repeated code.
