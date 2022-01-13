@@ -1,5 +1,6 @@
 'use strict';
 
+// Global variable declarations
 const buzzText = 'BZZZZT! INCORRECT!';
 const dingText = 'DING! Correct!';
 const errText = 'Please answer with either "yes/no" or "y/n"';
@@ -14,8 +15,10 @@ let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffre
 
 let answer, correctGuess, guesses;
 
+// Intro Alert
 alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
 
+// Yes or No questions
 for (let i = 0; i < yesNoQuestions.length; i++){
   answer = prompt(yesNoQuestions[i]).toLowerCase();
   console.log(answer);
@@ -46,6 +49,7 @@ for (let i = 0; i < yesNoQuestions.length; i++){
   }
 }
 
+// Q6 guessing question
 correctGuess = false;
 guesses = 4;
 while (guesses && !correctGuess){
@@ -73,6 +77,7 @@ if (!guesses && !correctGuess){
   alert('Well, you tried, but the answer is: Micha keeps one pet (a cat, named Tango)');
 }
 
+// Q7 guessing question
 correctGuess = false;
 guesses = 6;
 while (guesses && !correctGuess){
@@ -105,6 +110,7 @@ if (!guesses && !correctGuess){
   alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:\n${answerList}`);
 }
 
+// Conclusion alert
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
 Your final score was ${score}/7. Great job!
 Stick around once these dialogue boxes go away, and you can read all about me. 
