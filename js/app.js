@@ -7,15 +7,14 @@ const errText = 'Please answer with either "yes/no" or "y/n"';
 
 let score = 0;
 
-let user = prompt('Hi there, friend! What\'s your name?');
-
 let yesNoQuestions = ['Micha Pop Quiz!\nQ1: Was Micha once a sailor?','Micha Pop Quiz!\nQ2: Does Micha have a daughter?','Micha Pop Quiz!\nQ3: Did Micha attend college in Maryland?','Micha Pop Quiz!\nQ4: Has Micha ever released a software product before?','Micha Pop Quiz!\nQ5: Does Micha keep any pets?'];
 let isYesAnswer = [false, true, false, true, true];
 let favoriteAuthors = ['Mark Z. Danielewski', 'Arthur C. Clarke', 'Anne McCaffrey', 'Elizabeth Hayden', 'Octavia Butler', 'Angela Davis', 'Madeleine L\'Engle', 'Zilpha Keatly Snyder', 'Brandon Sanderson', 'Ursula K. Leguin'];
 
 let answer, correctGuess, guesses;
 
-// Intro Alert
+// Intro Prompt and Alert
+let user = prompt('Hi there, friend! What\'s your name?');
 alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
 
 // Yes or No questions
