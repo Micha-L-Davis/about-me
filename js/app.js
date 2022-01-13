@@ -47,7 +47,7 @@ for (let i = 0; i < yesNoQuestions.length; i++){
 }
 
 correctGuess = false;
-guesses = 10;
+guesses = 4;
 while (guesses && !correctGuess){
   answer = prompt('Micha Pop Quiz!\nQ6: Guess the number of pets Micha keeps (Hint: it\'s fewer than 10)');
   if (answer < 1){
