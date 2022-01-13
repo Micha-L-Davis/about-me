@@ -102,8 +102,7 @@ if (!guesses && !correctGuess){
       answerList += ' and ' + favoriteAuthors[i] + '.';
     }
   }
-  alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:
-  ${answerList}`);
+  alert(`Well, you tried, but none of those are in my top ten.  Here is the full list:\n${answerList}`);
 }
 
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
