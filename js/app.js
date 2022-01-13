@@ -71,7 +71,7 @@ while (guesses && !correctGuess){
 }
 
 correctGuess = false;
-guesses = 10;
+guesses = 4;
 while (guesses && !correctGuess){
   answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
   for (let i = 0; i < favoriteAuthors.length; i++){
