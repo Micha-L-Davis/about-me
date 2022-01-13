@@ -69,11 +69,14 @@ while (guesses && !correctGuess){
 
   alert('Whatever you entered, it wasn\'t the right answer.  Try again.');
 }
+if (!guesses && !correctGuess){
+  alert('Well, you tried, but the answer is: Micha keeps one pet (a cat, named Tango)');
+}
 
 correctGuess = false;
 guesses = 4;
 while (guesses && !correctGuess){
-  answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
+  answer = prompt('Micha Pop Quiz!\nQ7: Guess one of my top ten favorite authors.  Format your answer like this: [firstname] [middlename or initial (optional)] [lastname]');
   for (let i = 0; i < favoriteAuthors.length; i++){
     if (answer === favoriteAuthors[i]){
       alert(dingText);
@@ -87,6 +90,9 @@ while (guesses && !correctGuess){
     alert(`Hmmm. ${answer} isn't on my list of top favorites, but MAYBE they should be. Guess again!`);
     guesses--;
   }
+}
+if (!guesses && !correctGuess){
+  alert('Well, you tried, but none of those are in my top ten.  Check out my page after the quiz to see the full list!');
 }
 
 alert(`Well that sure was fun, wasn't it, ${user}? I thought so, too. 
