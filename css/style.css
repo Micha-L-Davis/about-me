@@ -5,14 +5,17 @@ body {
 }
 
 h1 {
-    color: darkblue;
+    color: rgb(19, 19, 97);
+    background-color: rgb(229, 247, 253);
+    box-shadow: inset 0em .25em .25em rgba(128, 128, 128, 0.555);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3vw;
+    font-size: x-large;
+    padding: 1%;
 }
 
 h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2vw;
+    font-size: large;
     margin: 1% 5%;
     
 }
@@ -27,18 +30,34 @@ ul {
     margin-left:  10%;
 }
 
-/* .lists {
-    display: inline-block;
-    height: max-content;
-    border: 1px solid black;
-} */
+.lists {
+    margin: 1%;
+    float: left;
+    color: whitesmoke;
+    background-color: #437788;
+    box-shadow: .5em .5em .5em rgba(43, 43, 58, 0.75);
+    padding: 1%;
+} 
 
 .story {
-    color: rgb(11, 11, 51);
     margin-top: 1%;
     margin-bottom: 1%;
     text-align: justify;
     text-justify: newspaper;
+}
+
+p {
+    color: whitesmoke;
+    background-color: #437788;
+    padding: 1% 1.5%;
+    margin: 0.5%;
+    box-shadow: .5em .5em .5em rgba(43, 43, 58, 0.75);
+}
+
+#list-container {
+    height: min-content;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #para1 {
@@ -54,4 +73,8 @@ ul {
 #para3 {
     margin-left: 15%;
     margin-right: 5%;
+}
+
+em {
+    font-style: italic;
 }
