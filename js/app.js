@@ -17,8 +17,7 @@ let answer, correctGuess, guesses;
 let user = prompt('Hi there, friend! What\'s your name?');
 alert(`Nice to meet you, ${user}! I'm Micha. Welcome to the "About Me" game! It's a very cool game where you can guess whether facts about me are accurate or not. To play, answer with either "yes/no" or "y/n" in the space provided.\nOkay?`);
 
-// Yes or No questions
-
+// Question function calls
 yesNoQuestion();
 
 guessNumber();
@@ -32,6 +31,9 @@ Stick around once these dialogue boxes go away, and you can read all about me.
 And... uh. Not sure how to end this. Never hosted a gameshow before... uh...
 \nThanks for playing, and please remember to spay and neuter your pets!`);
 
+
+// Function declarations
+// Q1-5 Yes/No Questions
 function yesNoQuestion(){
   for (let i = 0; i < yesNoQuestions.length; i++){
     answer = prompt(yesNoQuestions[i]).toLowerCase();
@@ -64,8 +66,7 @@ function yesNoQuestion(){
   }
 }
 
-
-// Q6 guessing question
+// Q6 number guessing question
 function guessNumber(){
   correctGuess = false;
   guesses = 4;
@@ -95,7 +96,7 @@ function guessNumber(){
   }
 }
 
-// Q7 guessing question
+// Q7 favorite guessing question
 function guessAuthor(){
   correctGuess = false;
   guesses = 6;
