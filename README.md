@@ -7,6 +7,8 @@ This simple page offers the user a chance to guess things about the author, befo
 
 ### Links and Resources
     * [public repo](https://github.com/Micha-L-Davis/about-me.git)
+    * [final page](https://micha-l-davis.github.io/about-me/)
+    * [Mozilla MDN Web Docs](https://developer.mozilla.org/en/docs/Web/JavaScript/Guide)
 
 ### Reflections and Comments
     * The purpose of this project was to introduce the concept of logical flow control.
